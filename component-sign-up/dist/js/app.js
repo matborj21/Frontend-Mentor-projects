@@ -1,12 +1,12 @@
 let viewportWidth;
-const image = document.getElementById('imahe');
+const bgImage = document.getElementById('body');
 // Set/update the viewportWidth value
 const setViewportWidth = function () {
     viewportWidth = window.screen.width || window.screen.availWidth;
-    if (viewportWidth < 640) {
-        return image.setAttribute('src', './dist/images/bg-intro-mobile.png');
+    if (viewportWidth < 500) {
+        return bgImage.style.backgroundImage = "url('./dist/images/bg-intro-mobile.png')";
     } else {
-        return image.setAttribute('src', './dist/images/bg-intro-desktop.png');
+        return bgImage.style.backgroundImage = "url('./dist/images/bg-intro-desktop.png')";
     }
 }
 
