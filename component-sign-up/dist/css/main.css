@@ -13,8 +13,8 @@ html{
     color: white;
 }
 body {
+    background-image: url('./../images/bg-intro-desktop.png');
     background-position: top;
-    /* background-repeat: no-repeat; */
     background-size: cover;
     background-color: var(--red);
 }
@@ -54,14 +54,23 @@ span{
     background-color: hsl(154, 61%, 44%);
     
 }
+.form-control{
+    display: inline-block;
+    width: 100%;
+}
+.form-control.success input {
+    border-color: hsl(154, 59%, 51%);
+}
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    border: .5px solid hsl(240, 7%, 89%);
+.form-control.error input{
+    border-color:hsl(0, 100%, 74%) ;
+}
+.form-control input {
+    border: 2px solid #f0f0f0;
     border-radius: 3px;
-    padding: 1em;
+    padding: 1.5em;
     font-weight: 600;
+    color: hsl(246, 25%, 77%);
 }
 
 .terms-service{
@@ -115,7 +124,9 @@ form{
     padding: 2em;
 }
 
+
 form input {
+    width: 100%;
     margin-bottom: 1em;
     height: 4.5em;
 }
@@ -149,6 +160,10 @@ form p{
         display: block;
         margin-top: auto;
     }
+
+    .form-control input  {
+    font-weight: 500;
+}
 }
 @media screen and (min-width: 760px){
     .container {
@@ -178,4 +193,7 @@ form p{
         height: 2.5em;
         
     }
+    .form-control input {
+    font-weight: 400;
+}
 }

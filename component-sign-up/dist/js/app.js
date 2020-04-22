@@ -1,16 +1,55 @@
 let viewportWidth;
 const bgImage = document.getElementById('body');
-// Set/update the viewportWidth value
-const setViewportWidth = function () {
-    viewportWidth = window.screen.width || window.screen.availWidth;
-    if (viewportWidth < 500) {
-        return bgImage.style.backgroundImage = "url('./dist/images/bg-intro-mobile.png')";
+const form = document.getElementById('form');
+const btnTry = document.querySelector('.btn-try');
+const btnClaim = document.querySelector('.btn-claim');
+const firstName = document.getElementById('first-name');
+const lastName = document.getElementById('last-name');
+const emailAdd = document.getElementById('email');
+const password = document.getElementById('password');
+
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    checkInputs();
+})
+
+const checkInputs = () => {
+    const firstNameValue = firstName.value.trim();
+    const lastNameValue = lastName.value.trim();
+    const emailAddValue = emailAdd.value.trim();
+    const passwordValue = password.value.trim();
+
+    if (firstNameValue === '') {
+        setErrorfor(firstName, 'First name cannot be blank');
     } else {
-        return bgImage.style.backgroundImage = "url('./dist/images/bg-intro-desktop.png')";
+        setSucess(firstName);
+    }
+
+    if (lastNameValue === '') {
+        setErrorfor(lastName, 'First name cannot be blank');
+    } else {
+        setSucess(lastName);
+    }
+    if (emailAddValue === '') {
+        setErrorfor(emailAdd, 'First name cannot be blank');
+    } else {
+        setSucess(emailAdd);
+    }
+    if (passwordValue === '') {
+        setErrorfor(password, 'First name cannot be blank');
+    } else {
+        setSucess(password);
     }
 }
 
-// On resize events, recalculate and log
-window.addEventListener('resize', function () {
-    setViewportWidth();
-}, false);
+function setErrorfor(input, message) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+}
+
+function setSucess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
+}

@@ -21,10 +21,26 @@
       .attribution a {
         color: #f2f2f2;
       }
+
       .attribution a:hover {
         border-bottom: 1.5px solid hsl(248, 32%, 49%);
       }
     </style>
+    <script>
+      // Set/update the viewportWidth value
+        // const setViewportWidth = function () {
+        //   viewportWidth = window.screen.width || window.screen.availWidth;
+        //   if (viewportWidth < 500) {
+        //     return bgImage.style.backgroundImage = "url('./dist/images/bg-intro-mobile.png')";
+        //   } 
+        // }
+
+
+        // // On resize events, recalculate and log
+        // window.addEventListener('resize', function () {
+        //   setViewportWidth();
+        // }, false);
+    </script>
   </head>
 
   <body id="body">
@@ -37,19 +53,27 @@
       </div>
       <div class="section">
         <a href="#" class="btn-try"><span>Try it free 7 days</span> then $20/mo. thereafter</a>
-        <form>
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
-        
+        <form id="form">
+          <div class="form-control">
+            <input id="first-name" type="text" placeholder="First Name" >
+          </div>
+          <div class="form-control">
+            <input id="last-name" type="text" placeholder="Last Name" >
+          </div>
+          <div class="form-control">
+            <input id="email" type="email" placeholder="Email Address" >
+          </div>
+          <div class="form-control">
+            <input id="password" type="password" placeholder="Password" >
+          </div>
+
           <button class="btn-claim">Claim your free trial</button>
-        
+
           <p class="terms-service">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
-        
+
         </form>
       </div>
-      
+
     </div>
     <footer>
       <p class="attribution">
@@ -58,6 +82,7 @@
       </p>
     </footer>
     <script src="./dist/js/app.js"></script>
+
   </body>
 
 </html>
