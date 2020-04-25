@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: hsl(204, 43%, 93%);
+    font-family: 'Karla', sans-serif;
+    color: white;
+}
+
+h1{
+    color:hsl(179, 62%, 43%);
+    font-size: 1.7em;
+}
+
+.leading {
+    color: hsl(71, 73%, 54%)
+}
+span {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: .8;
+    top: -15px;
+}
+h5 {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+button{
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    border: 1px solid hsl(71, 73%, 54%);
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.container{
+    margin: 2em;
+}
+#community-section h1,
+#community-section h3,
+#community-section p
+{
+    margin-bottom: 1em;
+}
+#community-section {
+    background-color: white;
+    padding: 1.5em;
+    border-top-right-radius: 5px; 
+    border-top-left-radius: 5px; 
+}
+#community-section p {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5;
+}
+
+#subscription-section {
+    display: block;
+    background-color: hsl(179, 63%, 36%);
+    padding: 1.5em;
+}
+#subscription-section button {
+    display: inline-block;
+    width: 100%;
+    margin-top: 1em;
+}
+
+#subscription-section h3 {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+#subscription-section h4 {
+    font-size: 2.7em;
+    margin-bottom: .3em;
+
+}
+
+
+
+
+#why-us-section {
+    background-color: hsl(179, 62%, 43%);
+    padding: 1em;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+#why-us-section h3 {
+    margin: 0 0 1em 0;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+#why-us-section p {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 2;
+}
+
+@media screen and (min-width: 765px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 10vh auto;
+    }
+
+    #why-us-section {
+        border-bottom-left-radius: 0;
+        flex-grow: 2;
+        padding: 3em;
+        line-height: 1
+    }
+}
